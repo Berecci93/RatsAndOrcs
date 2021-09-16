@@ -1,6 +1,7 @@
 package com.berecci;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 import java.util.Random;
@@ -13,6 +14,7 @@ public class Place {
     private final List<Supplier<Enemy>> enemyFactories = List.of(() -> new Skeleton(), () -> new Orc());
 
     private String name;
+    @Setter
     private Enemy currentEnemy;
 
     public Place(String name) {

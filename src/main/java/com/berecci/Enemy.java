@@ -10,5 +10,7 @@ public abstract class Enemy {
 
     public abstract int getHp();
 
+    public abstract void setHp(int hp);
+
     public abstract int getDmg();
 }

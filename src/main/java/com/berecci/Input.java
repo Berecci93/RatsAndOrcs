@@ -26,13 +26,15 @@ public class Input {
             game.startTurn();
             System.out.println(game.getInfo());
 
-            List<String> actions = game.getMoves();
+            List<Action> actions = game.getFilteredActions();
             for (int i = 0; i < actions.size(); i++) {
-                System.out.println("\t" + i + ": " + actions.get(i));
+                System.out.println("\t" + i + ": " + actions.get(i).getName());
             }
             String inputAsString = scanner.nextLine();
             int input = Integer.parseInt(inputAsString);
-            game.action(input);
+            actions.get(input).getAction().run();
+
+//            game.action(input);
         }
     }
 
